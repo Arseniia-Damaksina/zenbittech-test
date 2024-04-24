@@ -8,6 +8,8 @@ import config from '../../config/index';
 import { User } from '../../models/user.model';
 import { AuthModule } from '../auth/auth.module';
 import { TokenModule } from '../token/token.module';
+import { Building } from '../../models/building.model';
+import { BuildingModule } from '../building/building.module';
 
 @Module({
   imports: [
@@ -33,12 +35,13 @@ import { TokenModule } from '../token/token.module';
         },
         synchronize: true,
         autoLoadModels: true,
-        models: [User],
+        models: [User, Building],
       }),
     }),
     UserModule,
     AuthModule,
     TokenModule,
+    BuildingModule
   ],
   controllers: [AppController],
   providers: [AppService],
