@@ -1,4 +1,4 @@
-import { IsString } from "class-validator";
+import { IsString, IsNumber } from "class-validator";
 
 export class CreateUserDTO {
     @IsString()
@@ -17,4 +17,27 @@ export class LoginUserDTO {
 
     @IsString()
     password: string
+}
+
+export class BuildingDTO {
+    @IsString()
+    name: string
+
+    @IsNumber()
+    price: number
+
+    @IsNumber()
+    ticketPrice: number
+
+    @IsString()
+    yield: string
+    
+    @IsNumber()
+    sold: number
+
+    @IsNumber()
+    daysLeft: number
+
+    @IsString()
+    image: string
 }
