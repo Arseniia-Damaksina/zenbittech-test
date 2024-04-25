@@ -1,29 +1,32 @@
-import { ButtonTypes } from "./ButtonTypes";
+import { ButtonVariants } from "./ButtonVariants";
 
 type ButtonProps = {
   children: React.ReactNode;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   className?: string;
-  type: ButtonTypes;
+  variant: ButtonVariants;
+  type?: "submit" | "reset" | "button" | undefined;
 };
 
 const Button = ({
   children,
   onClick,
   className = "",
+  variant,
   type,
 }: ButtonProps) => {
   
-  const ButtonTypeStyles = {
-    [ButtonTypes.PRIMARY]: "bg-primary border border-secondary text-secondary font-bold h-10 w-40 rounded-md px-3 ml-3 flex justify-center items-center",
-    [ButtonTypes.SECONDARY]: "bg-secondary text-white font-bold h-10 w-40 rounded-md px-3 ml-3 flex justify-center items-center",
-    [ButtonTypes.TERTIARY]: "bg-transparent border border-white text-white font-bold h-10 w-40 rounded-md px-3 ml-3 flex justify-center items-center"
+  const ButtonVariantStyles = {
+    [ButtonVariants.PRIMARY]: "bg-primary border border-secondary text-secondary font-bold h-10 w-40 rounded-md flex justify-center items-center",
+    [ButtonVariants.SECONDARY]: "bg-secondary text-white font-bold h-10 w-40 rounded-md flex justify-center items-center",
+    [ButtonVariants.TERTIARY]: "bg-transparent border border-white text-white font-bold h-10 w-40 rounded-md flex justify-center items-center"
   };
 
   return (
     <button
+      type={type}
       onClick={onClick}
-      className={`${ButtonTypeStyles[type]} ${className}`}
+      className={`${ButtonVariantStyles[variant]} ${className}`}
     >
       {children}
     </button>

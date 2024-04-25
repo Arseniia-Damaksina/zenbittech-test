@@ -1,19 +1,21 @@
 import Button from "../UI/Button";
-import { ButtonTypes } from "../UI/ButtonTypes";
+import { ButtonVariants } from "../UI/ButtonVariants";
 
 const App = () => {
   return (
     <header className="w-full h-18 bg-primary flex justify-center items-center">
-      <div className="w-9/10 flex justify-end items-center">
+      <div className="w-8/10 flex justify-end items-center">
         <Button
           children="Sign Up"
-          type={ButtonTypes.PRIMARY}
+          variant={ButtonVariants.PRIMARY}
           onClick={() => {}}
+          className="px-3 ml-3"
         />
         <Button
           children="Log In"
-          type={ButtonTypes.SECONDARY}
+          variant={ButtonVariants.SECONDARY}
           onClick={() => {}}
+          className="px-3 ml-3"
         />
       </div>
     </header>

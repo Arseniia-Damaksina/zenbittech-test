@@ -21,16 +21,21 @@ export default {
 
     extend: {
       backgroundImage: {
-        "background": "url('https://www.tripsavvy.com/thmb/7E22jmwQMQMK6bz3eI7JB-_pMvM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-761603799-5b7d6c6ec9e77c0050b2c084.jpg')"
+        "background": "url('https://www.tripsavvy.com/thmb/7E22jmwQMQMK6bz3eI7JB-_pMvM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-761603799-5b7d6c6ec9e77c0050b2c084.jpg')",
+        "background-login": "url('https://wise.com/imaginary-v2/a1aff2ea163604c7be42140235af0772.jpg')"
       },
       colors: {
         primary: "#172234",
         secondary: "#B29F7E",
+        inputBg: "#E0E0E0",
+        assetsBg: "#F2F2F2"
       },
       width: {
-        "9/10": "85%"
+        "8/10": "85%",
+        "9/10": "90vw"
       },
       height: {
+        "9/10": "90%",
         "18": "72px"
       },
       maxWidth: {
