@@ -21,18 +21,17 @@ export default {
 
     extend: {
       backgroundImage: {
-        "background-main": "url('/img/hero-pattern.svg')"
+        "background": "url('https://www.tripsavvy.com/thmb/7E22jmwQMQMK6bz3eI7JB-_pMvM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-761603799-5b7d6c6ec9e77c0050b2c084.jpg')"
       },
       colors: {
         primary: "#172234",
         secondary: "#B29F7E",
       },
       width: {
-        "9/10": "95%",
+        "9/10": "85%"
       },
       height: {
-        "9/10": "91%",
-        "screen/90": "90vh",
+        "18": "72px"
       },
       maxWidth: {
         1: "100%",

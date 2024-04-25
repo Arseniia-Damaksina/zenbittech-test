@@ -1,11 +1,13 @@
-import './App.css'
+import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRouter from "./AppRouter";
 
 const App = () => {
   return (
-    <h1 className="text-3xl text-red-400 font-bold underline">
-    Hello world!
-  </h1>
-  )
-}
-
-export default App
+    <Router>
+      <AppRouter />
+    </Router>
+  );
+};
+ 
+export default App;
