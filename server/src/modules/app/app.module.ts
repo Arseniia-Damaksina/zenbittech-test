@@ -8,8 +8,10 @@ import config from '../../config/index';
 import { User } from '../../models/user.model';
 import { AuthModule } from '../auth/auth.module';
 import { TokenModule } from '../token/token.module';
-import { Building } from '../../models/building.model';
-import { BuildingModule } from '../building/building.module';
+import { Deal } from '../../models/deal.model';
+import { DealModule } from '../deal/deal.module';
+
+
 
 @Module({
   imports: [
@@ -35,13 +37,13 @@ import { BuildingModule } from '../building/building.module';
         },
         synchronize: true,
         autoLoadModels: true,
-        models: [User, Building],
+        models: [User, Deal],
       }),
     }),
     UserModule,
     AuthModule,
     TokenModule,
-    BuildingModule
+    DealModule
   ],
   controllers: [AppController],
   providers: [AppService],

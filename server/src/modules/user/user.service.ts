@@ -34,6 +34,11 @@ export class UserService {
   }
 
   async createUser(user: CreateUserDTO): Promise<CreateUserDTO> {
+    const existingUser = await this.findUserByEmail(user.email);
+    if (existingUser) {
+      throw new BadRequestException('User already exists');
+    }
+
     user.password = await this.hashPassword(user.password);
 
     await this.userRepository.create({

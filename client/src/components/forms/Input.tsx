@@ -1,18 +1,35 @@
 interface InputProps {
-    type: string;
-    label: string;
-    placeholder: string;
-    className?: string;
-    name: string;
+  type: string;
+  label: string;
+  placeholder: string;
+  className?: string;
+  name: string;
+  value: string;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-const Input: React.FC<InputProps> = ({ type, label, className, placeholder, name }) => {
+const Input: React.FC<InputProps> = ({
+  type,
+  label,
+  className,
+  placeholder,
+  name,
+  value,
+  onChange
+}) => {
   return (
-    <div className="flex flex-col">
-        <label className="font-bold">{label}</label>
-        <input type={type} name={name} placeholder={placeholder} className={`bg-inputBg rounded-md py-3 px-6 ${className}`}/>
+    <div className="flex flex-col mb-3">
+      <label className="font-merriweather font-bold">{label}</label>
+      <input
+        value={value}
+        onChange={onChange}
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        className={`font-merriweather bg-inputBg rounded-md py-3 px-6 ${className}`}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Input
+export default Input;

@@ -17,9 +17,9 @@ const Button = ({
 }: ButtonProps) => {
   
   const ButtonVariantStyles = {
-    [ButtonVariants.PRIMARY]: "bg-primary border border-secondary text-secondary font-bold h-10 w-40 rounded-md flex justify-center items-center",
-    [ButtonVariants.SECONDARY]: "bg-secondary text-white font-bold h-10 w-40 rounded-md flex justify-center items-center",
-    [ButtonVariants.TERTIARY]: "bg-transparent border border-white text-white font-bold h-10 w-40 rounded-md flex justify-center items-center"
+    [ButtonVariants.PRIMARY]: "bg-primary border border-secondary text-secondary font-merriweather font-bold h-10 w-40 rounded-md flex justify-center items-center",
+    [ButtonVariants.SECONDARY]: "bg-secondary text-white font-bold h-10 w-40 rounded-md font-merriweather flex justify-center items-center",
+    [ButtonVariants.TERTIARY]: "bg-transparent border border-white text-white font-merriweather font-bold h-10 w-40 rounded-md flex justify-center items-center"
   };
 
   return (
