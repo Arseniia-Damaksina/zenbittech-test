@@ -12,7 +12,7 @@ export class BuildingController {
       return this.buildingService.createBuilding(building);
     }
   
-    @UseGuards(TokenAuthGuard)
+    // @UseGuards(TokenAuthGuard)
     @Get()
     async getAllBuildings(): Promise<BuildingDTO[]> {
       return this.buildingService.getAllBuildings();
