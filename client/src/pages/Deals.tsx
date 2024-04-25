@@ -14,7 +14,11 @@ const Deals: React.FC = () => {
 
   return (
     <div className={`w-full h-screen bg-assetsBg flex flex-col items-center`}>
-      <h1 className="text-secondary">Open Deals</h1>
+      <div className="w-9/10">
+        <h1 className="text-secondary font-merriweather font-bold text-lg text-left">
+          Open Deals
+        </h1>
+      </div>
       <div className="w-9/10 h-9/10 flex flex-wrap">
         {deals.map((deal) => (
           <DealCard key={deal.id} deal={deal} />

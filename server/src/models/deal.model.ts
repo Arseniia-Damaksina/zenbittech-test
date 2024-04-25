@@ -1,7 +1,7 @@
-import { Model, Column, Table } from 'sequelize-typescript';
+import { Model, Column, Table, DataType } from 'sequelize-typescript';
 
 @Table
-export class Building extends Model {
+export class Deal extends Model {
   @Column({
     primaryKey: true,
     autoIncrement: true,
@@ -26,6 +26,6 @@ export class Building extends Model {
   @Column({ field: 'days_left' })
   daysLeft: number;
 
-  @Column
+  @Column(DataType.TEXT)
   image: string;
 }

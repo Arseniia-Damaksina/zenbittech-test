@@ -19,7 +19,7 @@ export class LoginUserDTO {
     password: string
 }
 
-export class BuildingDTO {
+export class DealDTO {
     @IsString()
     name: string
 

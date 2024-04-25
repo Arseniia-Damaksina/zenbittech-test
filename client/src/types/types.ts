@@ -16,3 +16,21 @@ export interface DealState {
   status: "loading" | "succeeded" | "failed" | "";
   error: string | null;
 }
+
+export interface RegisterFormData {
+  username: string;
+  email: string;
+  password: string;
+}
+
+export interface LoginFormData {
+  email: string;
+  password: string;
+}
+
+export interface LoginResponse {
+  username: string;
+  email: string;
+  password: string;
+  token: string;
+}
