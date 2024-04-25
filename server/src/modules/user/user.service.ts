@@ -20,9 +20,18 @@ export class UserService {
     return this.userRepository.findOne({ where: { email } });
   }
 
+  async publicUser(email: string) {
+    return this.userRepository.findOne({
+      where: { email },
+      attributes: {
+        exclude: ['password'],
+      },
+    });
+  }
+
   async getAllUsers(): Promise<CreateUserDTO[]> {
     return this.userRepository.findAll();
-  }  
+  }
 
   async createUser(user: CreateUserDTO): Promise<CreateUserDTO> {
     user.password = await this.hashPassword(user.password);
@@ -35,19 +44,10 @@ export class UserService {
     return user;
   }
 
-  async publicUser(email: string) {
-    return this.userRepository.findOne({
-      where: { email },
-      attributes: {
-        exclude: ['password'],
-      },
-    });
-  }
-
   async deleteUser(id: number) {
     await this.userRepository.destroy({
-      where: {id}
-    })
-    return true
+      where: { id },
+    });
+    return true;
   }
 }

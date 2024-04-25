@@ -2,12 +2,18 @@ import { Column, Model, Table } from 'sequelize-typescript';
 
 @Table
 export class User extends Model {
-    @Column
-    username: string
+  @Column({
+    primaryKey: true,
+    autoIncrement: true,
+  })
+  id: number;
 
-    @Column
-    email: string
+  @Column
+  username: string;
 
-    @Column
-    password: string
+  @Column
+  email: string;
+
+  @Column
+  password: string;
 }
