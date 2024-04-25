@@ -1,4 +1,5 @@
-import { Body, Controller, Post, Get, Delete, Param } from '@nestjs/common';
+import { TokenAuthGuard } from './../../guards/tokenAuthGuard';
+import { Body, Controller, Post, Get, Delete, Param, UseGuards } from '@nestjs/common';
 import { BuildingService } from './building.service';
 import { BuildingDTO } from '../../DTOs';
 
@@ -11,6 +12,7 @@ export class BuildingController {
       return this.buildingService.createBuilding(building);
     }
   
+    @UseGuards(TokenAuthGuard)
     @Get()
     async getAllBuildings(): Promise<BuildingDTO[]> {
       return this.buildingService.getAllBuildings();
