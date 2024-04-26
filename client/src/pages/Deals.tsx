@@ -13,16 +13,18 @@ const Deals: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <div className={`w-full h-screen bg-assetsBg flex flex-col items-center`}>
-      <div className="w-9/10">
-        <h1 className="text-secondary font-merriweather font-bold text-lg text-left">
+    <div className={`w-full h-screen/90 bg-assetsBg flex flex-col items-center `}>
+      <div className="w-9/10 mt-10 mb-5">
+        <h1 className="text-secondary font-merriweather font-bold text-3xl text-left">
           Open Deals
         </h1>
       </div>
-      <div className="w-9/10 h-9/10 flex flex-wrap">
+      <div className="w-full bg-assetsBg">
+        <div className="w-full flex flex-wrap justify-center mb-5 bg-assetsBg">
         {deals.map((deal) => (
           <DealCard key={deal.id} deal={deal} />
         ))}
+        </div>
       </div>
     </div>
   );

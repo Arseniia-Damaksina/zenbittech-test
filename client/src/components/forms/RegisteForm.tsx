@@ -64,10 +64,10 @@ const RegisterForm: React.FC = () => {
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <h1 className="w-3/5 text-left text-2xl font-bold font-merriweather my-3">
+      <h1 className="w-4/5 lg:w-3/5 text-left text-2xl font-bold font-merriweather my-3">
         Register
       </h1>
-      <div className="w-3/5 flex justify-start">
+      <div className="w-4/5 lg:w-3/5 flex justify-start">
         {error && (
           <p className="text-sm font-lato font-semibold text-red-500 text-left">
             {error}
@@ -75,7 +75,7 @@ const RegisterForm: React.FC = () => {
         )}
       </div>
 
-      <form className="w-3/5" onSubmit={handleSubmit}>
+      <form className="w-4/5 lg:w-3/5" onSubmit={handleSubmit}>
         <Input
           type="text"
           label="Name"

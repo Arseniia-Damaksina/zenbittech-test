@@ -39,10 +39,12 @@ export default {
       width: {
         "8/10": "85%",
         "9/10": "90vw",
+        "card": "630px"
       },
       height: {
         "9/10": "90%",
-        18: "72px",
+        "18": "72px",
+        "screen/90": "90vh",
       },
       maxWidth: {
         1: "100%",
