@@ -9,7 +9,7 @@ async function bootstrap() {
 
   // CORS
   app.enableCors({
-    origin: ['http://localhost:5173', 'https://react-app-3a8p.onrender.com'],
+    origin: ['http://localhost:5173', 'https://zenbittech-test-client.onrender.com'],
     methods: ['POST', 'GET', 'DELETE', 'PUT', 'PATCH'],
     credentials: true,
   });
